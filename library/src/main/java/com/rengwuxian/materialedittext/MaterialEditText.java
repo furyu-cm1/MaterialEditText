@@ -1332,7 +1332,7 @@ public class MaterialEditText extends AppCompatEditText {
     float bottomTextPadding = bottomTextSize + textMetrics.ascent + textMetrics.descent;
 
     // draw the characters counter
-    if ((hasFocus() && hasCharactersCounter()) || !isCharactersCountValid()) {
+    if ((/**hasFocus() &&*/ hasCharactersCounter()) || !isCharactersCountValid()) {
       textPaint.setColor(isCharactersCountValid() ? (baseColor & 0x00ffffff | 0x44000000) : errorColor);
       String charactersCounterText = getCharactersCounterText();
       canvas.drawText(charactersCounterText, isRTL() ? startX : endX - textPaint.measureText(charactersCounterText), lineStartY + bottomSpacing + relativeHeight, textPaint);
